@@ -25,9 +25,9 @@ export interface IDeploymentApiService {
    * @async
    * @param context           The deployment-api specific execution context.
    * @param filePath          The path to the file that contains the process model to import.
-   * @param name              The name under which to save the imported process model.
-   * @param xml               The raw xml code of the process model to import.
-   * @param overwriteExisting If true, overwrites process models with the same name.
+   * @param name              Optional: The name under which to save the imported process model.
+   *                          If not provided, the name of the file containing the process model will be used instead.
+   * @param overwriteExisting Optional: If true, overwrites process models with the same name.
    *                          Otherwise an error is thrown, if a process model with the same name is already stored.
    *                          Default is 'true'.
    * @returns                 A Promise, which resolves without content upon success, or rejects an error in case of an error.
