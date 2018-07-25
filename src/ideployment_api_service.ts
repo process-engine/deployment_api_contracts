@@ -1,7 +1,7 @@
-import {DeploymentContext} from './deployment_context';
 import {ImportProcessModelRequestPayload} from './data_model';
+import {DeploymentContext} from './deployment_context';
 
 export interface IDeploymentApiService {
-  importBpmnFromXml(context: DeploymentContext, payload: ImportProcessModelRequestPayload, overwriteExisting?: boolean): Promise<void>;
+  importBpmnFromXml(context: DeploymentContext, payload: ImportProcessModelRequestPayload): Promise<void>;
   importBpmnFromFile(context: DeploymentContext, filePath: string, overwriteExisting?: boolean): Promise<void>;
 }
