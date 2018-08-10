@@ -1,1 +1,1 @@
-export * from './import_process_model_request_payload';
+export * from './import_process_definitions_request_payload';
