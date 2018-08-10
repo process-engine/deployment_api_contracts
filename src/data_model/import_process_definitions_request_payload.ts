@@ -1,7 +1,7 @@
 /**
  * Contains all the information necessary to perform a process model import.
  */
-export class ImportProcessModelRequestPayload {
+export class ImportProcessDefinitionsRequestPayload {
   /**
    * The name under which to import the process model.
    */
