@@ -5,7 +5,7 @@ import {IIdentity} from '@essential-projects/iam_contracts';
 /**
  * Manages the deployment of process definitions. This currently includes the import of process definitions, either as xml or as file.
  */
-export interface IDeploymentApiService {
+export interface IDeploymentApi {
 
   /**
    * Imports process definitions into the database from the given payload.
