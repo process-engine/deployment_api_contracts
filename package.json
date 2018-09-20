@@ -18,6 +18,9 @@
     "url": "https://github.com/process-engine/deployment_api_contracts/issues"
   },
   "homepage": "https://github.com/process-engine/deployment_api_contracts#readme",
+  "dependencies": {
+    "@essential-projects/iam_contracts": "3.1.0"
+  },
   "devDependencies": {
     "@essential-projects/tslint-config": "1.1.1",
     "@types/express": "4.11.0",
