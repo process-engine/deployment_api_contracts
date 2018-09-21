@@ -1,15 +1,17 @@
 import {ImportProcessDefinitionsRequestPayload} from './data_model';
-import {DeploymentContext} from './deployment_context';
+
+import {IIdentity} from '@essential-projects/iam_contracts';
 
 /**
  * Manages the deployment of process definitions. This currently includes the import of process definitions, either as xml or as file.
  */
-export interface IDeploymentApiService {
+export interface IDeploymentApi {
+
   /**
    * Imports process definitions into the database from the given payload.
    *
    * @async
-   * @param context                   The deployment-api specific execution context.
+   * @param identity                  The requesting users identity.
    * @param payload                   The payload that contains all necessary data for the import.
    * @param payload.name              The name under which to save the imported process definitions.
    * @param payload.xml               The raw xml code of the process definitions to import.
@@ -18,12 +20,13 @@ export interface IDeploymentApiService {
    *                                  Default is 'true'.
    * @returns                         A Promise, which resolves without content upon success, or rejects an error in case of an error.
    */
-  importBpmnFromXml(context: DeploymentContext, payload: ImportProcessDefinitionsRequestPayload): Promise<void>;
+  importBpmnFromXml(identity: IIdentity, payload: ImportProcessDefinitionsRequestPayload): Promise<void>;
+
   /**
    * Imports process definitions into the database from a given file path.
    *
    * @async
-   * @param context           The deployment-api specific execution context.
+   * @param identity          The requesting users identity.
    * @param filePath          The path to the file that contains the process model to import.
    * @param name              Optional: The name under which to save the imported process definitions.
    *                          If not provided, the name of the file containing the process definitions will be used instead.
@@ -32,5 +35,5 @@ export interface IDeploymentApiService {
    *                          Default is 'true'.
    * @returns                 A Promise, which resolves without content upon success, or rejects an error in case of an error.
    */
-  importBpmnFromFile(context: DeploymentContext, filePath: string, name?: string, overwriteExisting?: boolean): Promise<void>;
+  importBpmnFromFile(identity: IIdentity, filePath: string, name?: string, overwriteExisting?: boolean): Promise<void>;
 }
