@@ -1,6 +1,6 @@
 {
   "name": "@process-engine/deployment_api_contracts",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "the api-package for process-engine-deployment",
   "main": "dist/commonjs/index.js",
   "typings": "dist/index.d.ts",
