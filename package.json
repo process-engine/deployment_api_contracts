@@ -1,6 +1,6 @@
 {
   "name": "@process-engine/deployment_api_contracts",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "the api-package for process-engine-deployment",
   "main": "dist/commonjs/index.js",
   "typings": "dist/index.d.ts",
@@ -27,7 +27,7 @@
     "@types/node": "^10.12.2",
     "gulp": "^4.0.0",
     "gulptraum": "^3.0.0",
-    "gulptraum-typescript": "^2.0.0",
+    "gulptraum-typescript": "^3.0.0",
     "tsconfig": "^7.0.0",
     "tslint": "^5.11.0",
     "typescript": "^3.1.6"
