@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/process-engine/deployment_api_contracts#readme",
   "dependencies": {
-    "@essential-projects/iam_contracts": "~3.4.0"
+    "@essential-projects/http_contracts": "^2.3.8",
+    "@essential-projects/iam_contracts": "^3.4.2"
   },
   "devDependencies": {
     "@essential-projects/tslint-config": "^1.1.3",
