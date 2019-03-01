@@ -18,7 +18,6 @@ export interface IDeploymentApi {
    * @param payload.overwriteExisting If true, overwrites process definitions with the same name.
    *                                  Otherwise an error is thrown, if process definitions with the same name is already stored.
    *                                  Default is 'true'.
-   * @returns                         A Promise, which resolves without content upon success, or rejects an error in case of an error.
    */
   importBpmnFromXml(identity: IIdentity, payload: ImportProcessDefinitionsRequestPayload): Promise<void>;
 
@@ -33,7 +32,15 @@ export interface IDeploymentApi {
    * @param overwriteExisting Optional: If true, overwrites process definitions with the same name.
    *                          Otherwise an error is thrown, if process definitions with the same name is already stored.
    *                          Default is 'true'.
-   * @returns                 A Promise, which resolves without content upon success, or rejects an error in case of an error.
    */
   importBpmnFromFile(identity: IIdentity, filePath: string, name?: string, overwriteExisting?: boolean): Promise<void>;
+
+  /**
+   * Removes the ProcesssModel with the given ID and all references to it.
+   *
+   * @async
+   * @param identity       The requesting users identity.
+   * @param processModelId The ID of the ProcessModel to undeploy.
+   */
+  undeploy(identity: IIdentity, processModelId: string): Promise<void>;
 }
