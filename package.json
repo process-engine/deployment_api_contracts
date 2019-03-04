@@ -1,6 +1,6 @@
 {
   "name": "@process-engine/deployment_api_contracts",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "description": "the api-package for process-engine-deployment",
   "main": "dist/commonjs/index.js",
   "typings": "dist/index.d.ts",
@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/process-engine/deployment_api_contracts#readme",
   "dependencies": {
-    "@essential-projects/iam_contracts": "~3.4.0"
+    "@essential-projects/http_contracts": "^2.3.8",
+    "@essential-projects/iam_contracts": "^3.4.2"
   },
   "devDependencies": {
     "@essential-projects/tslint-config": "^1.1.3",
