@@ -1,18 +1,14 @@
 /**
- * Contains all the information necessary to perform a process model import.
+ * Contains the request payload required for importing a ProcessDefinition.
+ * Includes the raw xml code and the name with which to save it.
  */
 export class ImportProcessDefinitionsRequestPayload {
-  /**
-   * The name under which to import the process model.
-   */
   public name: string;
-  /**
-   * The raw xml code of the process model to import.
-   */
   public xml: string;
   /**
-   * If set to true, the import will overwrite existing process models with the same name.
-   * If set to false, attempting to overwrite an already existing process model will cause an error.
+   * If set to true, any existing ProcessDefinition with the same name will
+   * be overwritten.
+   * Use with caution.
    */
   public overwriteExisting?: boolean;
 }
