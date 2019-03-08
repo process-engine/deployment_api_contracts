@@ -34,8 +34,8 @@ export interface IDeploymentApi {
    *                             ProcessDefinition.
    *                             If not provided, the name of the file will
    *                             be used instead.
-   * @param overwriteExisting    Optional: If true, overwrites ProcessDefinition
-   *                             with the same name.
+   * @param overwriteExisting    Optional: If true, any ProcessDefinition with
+   *                             the same name will be overwritten.
    * @throws {UnauthorizedError} If the given identity does not contain a
    *                             valid auth token.
    * @throws {ForbiddenError}    If the user is not allowed to deploy
